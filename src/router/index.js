@@ -70,7 +70,28 @@ export const asyncRoutes = [
       },
     ],
   }, */
-
+  {
+    path: '/menggod',
+    component: Layout,
+    redirect: 'noRedirect',
+    name: 'Menggod',
+    alwaysShow: true,
+    meta: { title: 'menggod', icon: 'asterisk' },
+    children: [
+      {
+        path: 'versionQuery',
+        name: 'VersionQuery',
+        component: () => import('@/views/menggod/versionQuery'),
+        meta: { title: '版本查询' },
+      },
+      {
+        path: '404',
+        name: 'Error404',
+        component: () => import('@/views/404'),
+        meta: { title: '404' },
+      },
+    ],
+  },
   {
     path: '/vab',
     component: Layout,

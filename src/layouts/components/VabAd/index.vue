@@ -31,7 +31,6 @@
     methods: {
       async fetchData() {
         const { data } = await getList()
-        this.adList = data
       },
     },
   }
